@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ahmed | Achievements</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#2563eb',
+              dark: '#1d4ed8'
+            },
+            secondary: {
+              DEFAULT: '#7c3aed',
+              dark: '#6d28d9'
+            },
+            accent: {
+              DEFAULT: '#f59e0b',
+              dark: '#d97706'
+            },
+            dark: {
+              DEFAULT: '#1e293b',
+              light: '#334155',
+              lighter: '#475569'
+            },
+            light: {
+              DEFAULT: '#f8fafc',
+              dark: '#f1f5f9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'gradient': 'gradient 8s ease infinite',
+            'text-gradient': 'textGradient 8s ease infinite',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            gradient: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+            },
+            textGradient: {
+              '0%, 100%': { 'background-position': 'left center' },
+              '50%': { 'background-position': 'right center' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/css/lightgallery.min.css" />
+  <style>
+    /* Custom lightbox styles */
+    .lg-backdrop {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      backdrop-filter: blur(5px);
+    }
+    
+    .lg-image {
+      max-height: 80vh !important;
+      max-width: 90vw !important;
+      border-radius: 8px;
+    }
+    
+    .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+      border-color: #2563eb !important;
+    }
+    
+    .lg-actions .lg-next, .lg-actions .lg-prev {
+      background-color: rgba(37, 99, 235, 0.7) !important;
+    }
+    
+    .lg-toolbar {
+      background-color: rgba(30, 41, 59, 0.8) !important;
+    }
+    
+    .lg-close {
+      color: white !important;
+    }
+    
+    /* Custom hover effect for achievement cards */
+    .achievement-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .achievement-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .achievement-card:hover .achievement-image {
+      transform: scale(1.1);
+    }
+    
+    .achievement-image {
+      transition: transform 0.5s ease;
+      cursor: pointer;
+    }
+    
+    /* Custom animation for stats cards */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .stat-card:hover {
+      animation: pulse 1.5s ease infinite;
+    }
+  </style>
+</head>
+<body class="bg-light font-sans text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+  <!-- Navigation Bar -->
+  <nav class="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-lg shadow-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo/Brand -->
+        <a href="home page.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Haseeb Ahmed</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">
+              <span>Portfolio</span>
+              <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 origin-top-left rounded-lg shadow-lg bg-white dark:bg-dark-light border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
+              <div class="py-1">
+                <a href="portfoli.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Biosketch</a>
+                <a href="Educational.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Education</a>
+                <a href="skills.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Skills</a>
+                <a href="CV.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">CV</a>
+              </div>
+            </div>
+          </div>
+          
+          <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Achievements</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Contact</a>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-lighter transition-colors">
+            <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+            <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Achievements Content -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-dark dark:to-dark-light">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
+          My <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Achievements</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Milestones that showcase my dedication, skills, and professional growth
+        </p>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mt-6"></div>
+      </div>
+  
+      <!-- Achievement Cards Grid -->
+      <div id="achievement-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Internship Achievement -->
+        <div class="achievement-card group relative overflow-hidden rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-light">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+          <a href="./internshipcom.PNG" class="gallery-item" data-sub-html="<h4>Proton Soft Tech Internship</h4><p>Completed an 8-week internship at Proton Soft Tech, focusing on web development projects.</p>">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./internshipcom.PNG" alt="Web Development Internship" 
+                   class="achievement-image w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-display font-bold text-white">Proton Soft Tech Internship</h3>
+              </div>
+            </div>
+          </a>
+          <div class="p-6 relative">
+            <div class="absolute -top-6 left-6 w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white shadow-lg z-20">
+              <i class="fas fa-laptop-code text-xl"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 mt-2">
+              Completed an 8-week internship at Proton Soft Tech, focusing on web development projects. Gained practical experience in building responsive websites, working with front-end and back-end technologies, and collaborating in a professional environment.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm font-medium">HTML</span>
+              <span class="px-3 py-1 bg-secondary/10 text-secondary dark:bg-secondary/20 rounded-full text-sm font-medium">CSS</span>
+              <span class="px-3 py-1 bg-accent/10 text-accent dark:bg-accent/20 rounded-full text-sm font-medium">JavaScript</span>
+              <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm font-medium">PHP</span>
+              <span class="px-3 py-1 bg-secondary/10 text-secondary dark:bg-secondary/20 rounded-full text-sm font-medium">MySQL</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Academic Achievement -->
+        <div class="achievement-card group relative overflow-hidden rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-light">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+          <a href="./transcript.jpg" class="gallery-item" data-sub-html="<h4>Advanced Diploma in Computer Science</h4><p>Successfully completed my Advanced Diploma in Computer Science (ADPCS) from Capital University of Science and Technology.</p>">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./transcript.jpg" alt="Academic Achievement" 
+                   class="achievement-image w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-display font-bold text-white">Advanced Diploma in Computer Science</h3>
+              </div>
+            </div>
+          </a>
+          <div class="p-6 relative">
+            <div class="absolute -top-6 left-6 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg z-20">
+              <i class="fas fa-graduation-cap text-xl"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 mt-2">
+              Successfully completed my Advanced Diploma in Computer Science (ADPCS) from Capital University of Science and Technology, gaining a strong foundation in programming, software development, and computer systems.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm font-medium">CUST</span>
+              <span class="px-3 py-1 bg-secondary/10 text-secondary dark:bg-secondary/20 rounded-full text-sm font-medium">Computer Science</span>
+              <span class="px-3 py-1 bg-accent/10 text-accent dark:bg-accent/20 rounded-full text-sm font-medium">Software Development</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Freelancing Achievement -->
+        <div class="achievement-card group relative overflow-hidden rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark-light">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+          <a href="./freelancing.jpg" class="gallery-item" data-sub-html="<h4>Freelancing Course</h4><p>Successfully completed a professional Freelancing and Web Development course from Sultana Foundation.</p>">
+            <div class="relative h-64 overflow-hidden">
+              <img src="./freelancing.jpg" alt="Freelancing Achievement" 
+                   class="achievement-image w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <h3 class="text-xl font-display font-bold text-white">Freelancing Course</h3>
+              </div>
+            </div>
+          </a>
+          <div class="p-6 relative">
+            <div class="absolute -top-6 left-6 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg z-20">
+              <i class="fas fa-laptop-code text-xl"></i>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 mt-2">
+              Successfully completed a professional Freelancing and Web Development course from Sultana Foundation, gaining skills in client communication, project delivery, and online marketplace strategies.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm font-medium">Freelancing</span>
+              <span class="px-3 py-1 bg-secondary/10 text-secondary dark:bg-secondary/20 rounded-full text-sm font-medium">Web Development</span>
+              <span class="px-3 py-1 bg-accent/10 text-accent dark:bg-accent/20 rounded-full text-sm font-medium">Sultana Foundation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="stat-card bg-white dark:bg-dark-light p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 text-center transform transition-all hover:scale-105">
+          <div class="text-4xl font-display font-bold text-primary mb-2 animate-fade-in">10+</div>
+          <div class="text-gray-600 dark:text-gray-400">Projects Completed</div>
+        </div>
+        <div class="stat-card bg-white dark:bg-dark-light p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 text-center transform transition-all hover:scale-105">
+          <div class="text-4xl font-display font-bold text-secondary mb-2 animate-fade-in">5</div>
+          <div class="text-gray-600 dark:text-gray-400">Awards Won</div>
+        </div>
+        <div class="stat-card bg-white dark:bg-dark-light p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 text-center transform transition-all hover:scale-105">
+          <div class="text-4xl font-display font-bold text-accent mb-2 animate-fade-in">3.9</div>
+          <div class="text-gray-600 dark:text-gray-400">GPA</div>
+        </div>
+        <div class="stat-card bg-white dark:bg-dark-light p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 text-center transform transition-all hover:scale-105">
+          <div class="text-4xl font-display font-bold text-primary mb-2 animate-fade-in">1000+</div>
+          <div class="text-gray-600 dark:text-gray-400">Hours Coding</div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-20 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12 text-center text-white shadow-xl transform transition-all hover:scale-[1.01]">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Want to See More of My Work?</h2>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          Explore my portfolio to see detailed case studies of my projects and the impact they've created.
+        </p>
+        <a href="portfoli.html" class="inline-flex items-center px-8 py-3 bg-white text-primary font-medium rounded-full hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
+          View Portfolio
+          <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-dark z-50 flex flex-col items-center justify-center opacity-0 invisible transition-all duration-300">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gray-600 dark:text-gray-300">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="flex flex-col items-center space-y-8 text-xl">
+      <div class="relative group text-center">
+        <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+          <span>Portfolio</span>
+          <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all"></i>
+        </button>
+        <div class="mt-2 space-y-2 hidden group-hover:block">
+          <a href="portfoli.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Biosketch</a>
+          <a href="Educational.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Education</a>
+          <a href="skills.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+          <a href="CV.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">CV</a>
+        </div>
+      </div>
+      
+      <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Achievements</a>
+      <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      
+      <button id="mobile-theme-toggle" class="mt-4 p-3 rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-600 dark:text-gray-300">
+        <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+        <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/lightgallery.min.js"></script>
+  <!-- Include lg-zoom plugin for better image viewing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script>
+    // Initialize lightGallery when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = lightGallery(document.getElementById('achievement-gallery'), {
+        selector: '.gallery-item',
+        plugins: [lgZoom],
+        download: false,
+        counter: false,
+        getCaptionFromTitleOrAlt: false,
+        speed: 300,
+        mode: 'lg-fade',
+        cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        backdropDuration: 300,
+        hideBarsDelay: 2000
+      });
+
+      // Make images clickable even if they're not wrapped in <a> tags
+      document.querySelectorAll('.achievement-image').forEach(img => {
+        img.addEventListener('click', function() {
+          const parentLink = this.closest('.gallery-item');
+          if (parentLink) {
+            gallery.openGallery(parentLink);
+          }
+        });
+      });
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'invisible');
+      mobileMenu.classList.add('opacity-100', 'visible');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      document.body.style.overflow = '';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  </script>
+</body>
+</html>

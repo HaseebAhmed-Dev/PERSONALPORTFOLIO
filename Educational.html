@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ahmed | Education</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#2563eb',
+              dark: '#1d4ed8'
+            },
+            secondary: {
+              DEFAULT: '#7c3aed',
+              dark: '#6d28d9'
+            },
+            accent: {
+              DEFAULT: '#f59e0b',
+              dark: '#d97706'
+            },
+            dark: {
+              DEFAULT: '#1e293b',
+              light: '#334155',
+              lighter: '#475569'
+            },
+            light: {
+              DEFAULT: '#f8fafc',
+              dark: '#f1f5f9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .education-card {
+  background: linear-gradient(145deg, rgba(248,250,252,0.9) 0%, rgba(241,245,249,0.9) 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+.dark .education-card {
+  background: linear-gradient(145deg, rgba(30,41,59,0.9) 0%, rgba(51,65,85,0.9) 100%);
+}
+.education-card:hover {
+  transform: translateY(-5px); /* Slightly lift the card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(37, 99, 235, 0.5); /* Add shadow and glow effect */
+}
+    .skill-pill {
+      transition: all 0.3s ease;
+    }
+    .skill-pill:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body class="bg-light font-sans text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+  <!-- Navigation Bar -->
+  <nav class="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-lg shadow-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo/Brand -->
+        <a href="home page.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Haseeb Ahmed</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">
+              <span>Portfolio</span>
+              <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 origin-top-left rounded-lg shadow-lg bg-white dark:bg-dark-light border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
+              <div class="py-1">
+                <a href="portfoli.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Biosketch</a>
+                <a href="Educational.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Education</a>
+                <a href="skills.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Skills</a>
+                <a href="CV.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">CV</a>
+              </div>
+            </div>
+          </div>
+          
+          <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Achievements</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Contact</a>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-lighter transition-colors">
+            <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+            <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center mb-20 animate-fade-in">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-6">
+          My <span class="relative">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Education</span>
+            <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></span>
+          </span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          A comprehensive overview of my academic journey and qualifications
+        </p>
+      </div>
+
+      <!-- Education Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- ADPCS Card -->
+        <div class="education-card rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl">
+          <div class="flex items-start mb-6">
+            <div class="flex-shrink-0 mr-6">
+              <div class="w-16 h-16 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
+                <i class="fas fa-graduation-cap text-2xl"></i>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white">ADPCS</h2>
+                <span class="inline-block mt-2 md:mt-0 px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary dark:bg-primary/20">
+                  2020 - 2022
+                </span>
+              </div>
+              <p class="text-gray-500 dark:text-gray-400">Associate Degree Program in Computer Science</p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 mr-4 text-primary">
+                <i class="fas fa-university"></i>
+              </div>
+              <div>
+                <p class="font-medium text-gray-900 dark:text-white">Capital University of Science and Technology</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Islamabad, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div class="flex-shrink-0 mr-4 text-primary">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="w-full">
+                <p class="font-medium text-gray-900 dark:text-white">CGPA: 2.98/4.0</p>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
+                  <div class="bg-primary dark:bg-primary-dark h-2 rounded-full" style="width: 74.5%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Key Coursework</h3>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                  <span class="text-sm">Data Structures</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                  <span class="text-sm">Algorithms</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                  <span class="text-sm">Database Systems</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-check-circle text-primary mr-2 text-sm"></i>
+                  <span class="text-sm">OOP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Skills Gained</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20">
+                Problem Solving
+              </span>
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20">
+                Software Design
+              </span>
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary dark:bg-primary/20">
+                System Analysis
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intermediate Card -->
+        <div class="education-card rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl">
+          <div class="flex items-start mb-6">
+            <div class="flex-shrink-0 mr-6">
+              <div class="w-16 h-16 rounded-2xl bg-secondary/10 dark:bg-secondary/20 flex items-center justify-center text-secondary">
+                <i class="fas fa-laptop-code text-2xl"></i>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white">H.S.S.C. Intermediate</h2>
+                <span class="inline-block mt-2 md:mt-0 px-3 py-1 rounded-full text-sm font-medium bg-secondary/10 text-secondary dark:bg-secondary/20">
+                  2019 - 2021
+                </span>
+              </div>
+              <p class="text-gray-500 dark:text-gray-400">Computer Science</p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 mr-4 text-secondary">
+                <i class="fas fa-school"></i>
+              </div>
+              <div>
+                <p class="font-medium text-gray-900 dark:text-white">National School Pakistan Town</p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm">Islamabad, Pakistan</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div class="flex-shrink-0 mr-4 text-secondary">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <div class="w-full">
+                <p class="font-medium text-gray-900 dark:text-white">Percentage: 82%</p>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-2">
+                  <div class="bg-secondary dark:bg-secondary-dark h-2 rounded-full" style="width: 82%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Achievements</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-medal text-secondary mr-2 mt-1 text-sm"></i>
+                  <span class="text-sm">Top 10% of class</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-trophy text-secondary mr-2 mt-1 text-sm"></i>
+                  <span class="text-sm">Science Fair Winner</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-users text-secondary mr-2 mt-1 text-sm"></i>
+                  <span class="text-sm">Computer Club President</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Skills Gained</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 text-secondary dark:bg-secondary/20">
+                Programming Basics
+              </span>
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 text-secondary dark:bg-secondary/20">
+                Logical Thinking
+              </span>
+              <span class="skill-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-secondary/10 text-secondary dark:bg-secondary/20">
+                Team Leadership
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <!-- <div class="mt-20">
+        <h2 class="text-3xl font-display font-bold text-center text-gray-900 dark:text-white mb-12">
+          <span class="relative">
+            <span class="bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">Certifications</span>
+            <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-dark rounded-full"></span>
+          </span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> -->
+          <!-- Web Dev Certification -->
+          <!-- <div class="bg-white dark:bg-dark-light rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-xl bg-accent/10 dark:bg-accent/20 flex items-center justify-center text-accent mb-4">
+              <i class="fas fa-globe text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">Web Development</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Comprehensive training in modern web technologies and frameworks.</p>
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span>June 2023</span>
+            </div>
+          </div> -->
+
+          <!-- Python Certification
+          <div class="bg-white dark:bg-dark-light rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mb-4">
+              <i class="fab fa-python text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">Python Programming</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Advanced Python including data structures and algorithms.</p>
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span>March 2023</span>
+            </div>
+          </div> -->
+
+          <!-- Database Certification -->
+          <!-- <div class="bg-white dark:bg-dark-light rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-xl bg-secondary/10 dark:bg-secondary/20 flex items-center justify-center text-secondary mb-4">
+              <i class="fas fa-database text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold mb-2">Database Systems</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">SQL and NoSQL database design and management.</p>
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span>January 2023</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-dark z-50 flex flex-col items-center justify-center opacity-0 invisible transition-all duration-300">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gray-600 dark:text-gray-300">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="flex flex-col items-center space-y-8 text-xl">
+      <div class="relative group text-center">
+        <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+          <span>Portfolio</span>
+          <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all"></i>
+        </button>
+        <div class="mt-2 space-y-2 hidden group-hover:block">
+          <a href="portfoli.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Biosketch</a>
+          <a href="Educational.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Education</a>
+          <a href="skills.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+          <a href="CV.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">CV</a>
+        </div>
+      </div>
+      
+      <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Achievements</a>
+      <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      
+      <button id="mobile-theme-toggle" class="mt-4 p-3 rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-600 dark:text-gray-300">
+        <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+        <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+      </button>
+    </div>
+  </div>
+<!-- 
+  <footer class="bg-white dark:bg-dark-light py-8 border-t border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 dark:text-gray-300">
+      © 2025 Haseeb Ahmed. All rights reserved.
+    </div>
+  </footer> -->
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'invisible');
+      mobileMenu.classList.add('opacity-100', 'visible');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      document.body.style.overflow = '';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  </script>
+</body>
+</html>

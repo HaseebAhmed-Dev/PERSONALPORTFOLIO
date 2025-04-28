@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ahmed | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#2563eb',
+              dark: '#1d4ed8'
+            },
+            secondary: {
+              DEFAULT: '#7c3aed',
+              dark: '#6d28d9'
+            },
+            accent: {
+              DEFAULT: '#f59e0b',
+              dark: '#d97706'
+            },
+            dark: {
+              DEFAULT: '#1e293b',
+              light: '#334155',
+              lighter: '#475569'
+            },
+            light: {
+              DEFAULT: '#f8fafc',
+              dark: '#f1f5f9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'gradient': 'gradient 8s ease infinite',
+            'text-gradient': 'textGradient 8s ease infinite',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            gradient: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+            },
+            textGradient: {
+              '0%, 100%': { 'background-position': 'left center' },
+              '50%': { 'background-position': 'right center' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light font-sans text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+  <!-- Navigation Bar -->
+  <nav class="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-lg shadow-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo/Brand -->
+        <a href="home page.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Haseeb Ahmed</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">
+              <span>Portfolio</span>
+              <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 origin-top-left rounded-lg shadow-lg bg-white dark:bg-dark-light border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
+              <div class="py-1">
+                <a href="portfoli.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Biosketch</a>
+                <a href="Educational.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Education</a>
+                <a href="skills.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Skills</a>
+                <a href="CV.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">CV</a>
+              </div>
+            </div>
+          </div>
+          
+          <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Achievements</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Contact</a>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-lighter transition-colors">
+            <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+            <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Content -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-dark dark:to-dark-light">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
+          Get In <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Touch</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          Have a project in mind or want to discuss opportunities? Feel free to reach out!
+        </p>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mt-6"></div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <!-- Contact Form -->
+        <div class="w-full lg:w-2/3 bg-white dark:bg-dark-light p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 animate-fade-in">
+          <h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white mb-6">
+            Send Me a <span class="text-primary">Message</span>
+          </h2>
+          
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-dark-lighter transition-all duration-300" placeholder="John Doe" required>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-dark-lighter transition-all duration-300" placeholder="your@email.com" required>
+              </div>
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+              <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-dark-lighter transition-all duration-300" placeholder="What's this about?">
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
+              <textarea id="message" rows="6" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-dark-lighter transition-all duration-300" placeholder="Tell me about your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="w-full lg:w-1/3 space-y-8">
+          <div class="bg-white dark:bg-dark-light p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-display font-bold text-primary dark:text-primary mb-6 flex items-center">
+              <i class="fas fa-map-marker-alt mr-3"></i> Contact Information
+            </h3>
+            
+            <ul class="space-y-6">
+              <li class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mr-4 text-primary">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Location</p>
+                  <p class="text-gray-600 dark:text-gray-400">Islamabad, Pakistan</p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mr-4 text-primary">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Email</p>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    <a href="mailto:haseebahmed3328@gmail.com" class="hover:text-primary transition-colors">haseebahmed3328@gmail.com</a>
+                  </p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mr-4 text-primary">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <p class="font-medium text-gray-900 dark:text-white">Phone</p>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    <a href="tel:+923123456789" class="hover:text-primary transition-colors">+92 312 3456789</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white dark:bg-dark-light p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-display font-bold text-primary dark:text-primary mb-6 flex items-center">
+              <i class="fas fa-share-alt mr-3"></i> Social Media
+            </h3>
+            
+            <div class="flex justify-center space-x-4">
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-[#0A66C2] hover:text-white transition-all duration-300">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="https://github.com/yourusername" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+              <a href="https://twitter.com/yourhandle" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-[#1DA1F2] hover:text-white transition-all duration-300">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="https://instagram.com/yourhandle" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-[#E4405F] hover:text-white transition-all duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-dark z-50 flex flex-col items-center justify-center opacity-0 invisible transition-all duration-300">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gray-600 dark:text-gray-300">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="flex flex-col items-center space-y-8 text-xl">
+      <div class="relative group text-center">
+        <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+          <span>Portfolio</span>
+          <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all"></i>
+        </button>
+        <div class="mt-2 space-y-2 hidden group-hover:block">
+          <a href="portfoli.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Biosketch</a>
+          <a href="Educational.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Education</a>
+          <a href="skills.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+          <a href="CV.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">CV</a>
+        </div>
+      </div>
+      
+      <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Achievements</a>
+      <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      
+      <button id="mobile-theme-toggle" class="mt-4 p-3 rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-600 dark:text-gray-300">
+        <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+        <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'invisible');
+      mobileMenu.classList.add('opacity-100', 'visible');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      document.body.style.overflow = '';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+
+    // Form submission
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Here you would typically send the form data to a server
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

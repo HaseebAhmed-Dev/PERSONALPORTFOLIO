@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ahmed | Technical Skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#2563eb',
+              dark: '#1d4ed8'
+            },
+            secondary: {
+              DEFAULT: '#7c3aed',
+              dark: '#6d28d9'
+            },
+            accent: {
+              DEFAULT: '#f59e0b',
+              dark: '#d97706'
+            },
+            dark: {
+              DEFAULT: '#1e293b',
+              light: '#334155',
+              lighter: '#475569'
+            },
+            light: {
+              DEFAULT: '#f8fafc',
+              dark: '#f1f5f9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'progress': 'progress 1.5s ease-out forwards',
+            'gradient': 'gradient 8s ease infinite',
+            'text-gradient': 'textGradient 8s ease infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            progress: {
+              '0%': { 'stroke-dashoffset': '283' },
+            },
+            gradient: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+            },
+            textGradient: {
+              '0%, 100%': { 'background-position': 'left center' },
+              '50%': { 'background-position': 'right center' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light font-sans text-gray-800 dark:bg-dark dark:text-gray-200 transition-colors duration-300">
+  <!-- Navigation Bar -->
+  <nav class="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-lg shadow-sm z-50 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo/Brand -->
+        <a href="home page.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Haseeb Ahmed</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">
+              <span>Skills</span>
+              <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 origin-top-left rounded-lg shadow-lg bg-white dark:bg-dark-light border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 -translate-y-2">
+              <div class="py-1">
+                <a href="portfoli.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Biosketch</a>
+                <a href="Educational.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Education</a>
+                <a href="skills.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">Skills</a>
+                <a href="CV.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-lighter transition-colors">CV</a>
+              </div>
+            </div>
+          </div>
+          
+          <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Achievements</a>
+          <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Contact</a>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-lighter transition-colors">
+            <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+            <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Skills Content -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-dark dark:to-dark-light">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
+          My <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Technical Skills</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          A comprehensive overview of my technical expertise and proficiency levels
+        </p>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mt-6"></div>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="html5">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+            <span class="font-medium">HTML5</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="css3">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+            <span class="font-medium">CSS3</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="js">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+            <span class="font-medium">JavaScript</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="react">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-react text-4xl text-blue-400 mb-3"></i>
+            <span class="font-medium">React</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="python">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-python text-4xl text-blue-600 mb-3"></i>
+            <span class="font-medium">Python</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="django">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-leaf text-4xl text-green-600 mb-3"></i>
+            <span class="font-medium">Django</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="mysql">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-database text-4xl text-blue-500 mb-3"></i>
+            <span class="font-medium">MySQL</span>
+          </div>
+        </button>
+        
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="git">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-git-alt text-4xl text-orange-600 mb-3"></i>
+            <span class="font-medium">Git</span>
+          </div>
+        </button>
+
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="php">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-php text-4xl text-indigo-600 mb-3"></i>
+            <span class="font-medium">PHP</span>
+          </div>
+        </button>
+
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="bootstrap">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-bootstrap text-4xl text-purple-600 mb-3"></i>
+            <span class="font-medium">Bootstrap</span>
+          </div>
+        </button>
+
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="tailwind">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-wind text-4xl text-cyan-500 mb-3"></i>
+            <span class="font-medium">Tailwind CSS</span>
+          </div>
+        </button>
+
+        <button class="skill-btn relative overflow-hidden group bg-white dark:bg-dark-light p-4 rounded-xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 transition-all transform hover:-translate-y-1" data-skill="github">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          <div class="flex flex-col items-center">
+            <i class="fab fa-github text-4xl text-gray-800 dark:text-gray-200 mb-3"></i>
+            <span class="font-medium">GitHub</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Skill Details -->
+      <div class="bg-white dark:bg-dark-light p-8 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Progress Circle -->
+          <div class="w-full lg:w-1/3 flex justify-center">
+            <div class="relative w-64 h-64">
+              <svg class="w-full h-full" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#f0f0f0" stroke-width="8"/>
+                <circle id="progress-circle" cx="50" cy="50" r="45" fill="none" stroke="#2563eb" stroke-width="8" 
+                        stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+              </svg>
+              <div class="absolute inset-0 flex items-center justify-center flex-col">
+                <span id="progress-percent" class="text-5xl font-display font-bold text-primary dark:text-primary">0%</span>
+                <span id="skill-title" class="text-lg font-medium text-gray-600 dark:text-gray-400 mt-2">Select a Skill</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Skill Information -->
+          <div class="w-full lg:w-2/3">
+            <h2 id="skill-title-full" class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">Select a Skill</h2>
+            <p id="skill-description" class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Click on any skill button to see details about my proficiency and experience with that technology.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-gray-50 dark:bg-dark p-5 rounded-lg border-l-4 border-accent hover:shadow-md transition-shadow">
+                <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-3 flex items-center">
+                  <i class="fas fa-project-diagram text-accent mr-2"></i> Projects
+                </h3>
+                <p id="skill-projects" class="text-gray-700 dark:text-gray-300">-</p>
+              </div>
+              
+              <div class="bg-gray-50 dark:bg-dark p-5 rounded-lg border-l-4 border-secondary hover:shadow-md transition-shadow">
+                <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-3 flex items-center">
+                  <i class="fas fa-briefcase text-secondary mr-2"></i> Experience
+                </h3>
+                <p id="skill-experience" class="text-gray-700 dark:text-gray-300">-</p>
+              </div>
+            </div>
+            
+            <div class="mt-6 bg-gray-50 dark:bg-dark p-5 rounded-lg border-l-4 border-primary hover:shadow-md transition-shadow">
+              <h3 class="font-display font-bold text-lg text-gray-900 dark:text-white mb-3 flex items-center">
+                <i class="fas fa-star text-primary mr-2"></i> Key Strengths
+              </h3>
+              <ul id="skill-strengths" class="space-y-2 text-gray-700 dark:text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 mr-2 text-sm"></i>
+                  <span>Select a skill to view specific strengths</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-white dark:bg-dark z-50 flex flex-col items-center justify-center opacity-0 invisible transition-all duration-300">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-3xl text-gray-600 dark:text-gray-300">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <div class="flex flex-col items-center space-y-8 text-xl">
+      <div class="relative group text-center">
+        <button class="flex items-center space-x-1 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+          <span>Skills</span>
+          <i class="fas fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-all"></i>
+        </button>
+        <div class="mt-2 space-y-2 hidden group-hover:block">
+          <a href="portfoli.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Biosketch</a>
+          <a href="Educational.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Education</a>
+          <a href="skills.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+          <a href="CV.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">CV</a>
+        </div>
+      </div>
+      
+      <a href="achivements.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Achievements</a>
+      <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      
+      <button id="mobile-theme-toggle" class="mt-4 p-3 rounded-full bg-gray-100 dark:bg-dark-lighter text-gray-600 dark:text-gray-300">
+        <i class="fas fa-moon text-gray-600 dark:text-gray-300 hidden dark:block"></i>
+        <i class="fas fa-sun text-gray-600 dark:text-gray-300 block dark:hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Skill data
+    const skills = {
+      html5: {
+        title: "HTML5",
+        percent: 95,
+        description: "Strong foundation in semantic HTML5 markup, forms, accessibility, and modern web standards. Experienced in creating accessible, SEO-friendly markup that follows best practices.",
+        projects: "E-commerce sites, Portfolio websites, Admin dashboards, CMS implementations",
+        experience: "3+ years of professional experience",
+        strengths: [
+          "Semantic HTML5 markup",
+          "Accessibility (WCAG)",
+          "SEO optimization",
+          "Cross-browser compatibility"
+        ]
+      },
+      css3: {
+        title: "CSS3",
+        percent: 90,
+        description: "Proficient in responsive design, Flexbox, Grid, animations, and CSS preprocessors like Sass. Skilled in creating maintainable CSS architectures and design systems.",
+        projects: "Responsive layouts, CSS animations, Design systems, Component libraries",
+        experience: "3 years of professional experience",
+        strengths: [
+          "Responsive design",
+          "CSS Grid/Flexbox",
+          "CSS animations",
+          "Sass/SCSS preprocessing"
+        ]
+      },
+      js: {
+        title: "JavaScript",
+        percent: 85,
+        description: "Expertise in ES6+, DOM manipulation, async programming, and modern JS frameworks. Experienced in building interactive web applications with clean, maintainable code.",
+        projects: "Interactive web apps, API integrations, Frontend components, SPAs",
+        experience: "2.5 years of professional experience",
+        strengths: [
+          "ES6+ features",
+          "Async programming",
+          "DOM manipulation",
+          "Functional programming"
+        ]
+      },
+      react: {
+        title: "React.js",
+        percent: 80,
+        description: "Building component-based UIs with React hooks, context API, and state management. Experienced in creating reusable components and optimizing performance.",
+        projects: "Single Page Applications, Custom hooks, UI libraries, Dashboards",
+        experience: "2 years of professional experience",
+        strengths: [
+          "React hooks",
+          "Context API",
+          "Performance optimization",
+          "Component architecture"
+        ]
+      },
+      python: {
+        title: "Python",
+        percent: 75,
+        description: "Experience with Python for web development, scripting, and data analysis. Familiar with Python's ecosystem and best practices for clean, efficient code.",
+        projects: "Django backends, Automation scripts, Data processing, APIs",
+        experience: "2 years of experience",
+        strengths: [
+          "Web development",
+          "Scripting",
+          "Data processing",
+          "API development"
+        ]
+      },
+      django: {
+        title: "Django",
+        percent: 70,
+        description: "Building secure and scalable web applications with Django framework. Knowledge of Django ORM, authentication, and REST framework.",
+        projects: "REST APIs, Authentication systems, Admin panels, CMS",
+        experience: "1.5 years of experience",
+        strengths: [
+          "Django ORM",
+          "Authentication",
+          "REST framework",
+          "Security practices"
+        ]
+      },
+      mysql: {
+        title: "MySQL",
+        percent: 90,
+        description: "Database design, optimization, and complex query writing with MySQL. Experienced in schema design, indexing, and performance tuning.",
+        projects: "Database schemas, Query optimization, Data migrations, Reports",
+        experience: "2 years of professional experience",
+        strengths: [
+          "Schema design",
+          "Query optimization",
+          "Indexing strategies",
+          "Data modeling"
+        ]
+      },
+      git: {
+        title: "Git",
+        percent: 80,
+        description: "Version control, branching strategies, and collaborative workflows with Git. Experienced with Git flow and managing complex codebases.",
+        projects: "Team collaborations, Open source contributions, CI/CD pipelines",
+        experience: "3 years of professional experience",
+        strengths: [
+          "Branching strategies",
+          "Merge conflict resolution",
+          "Git flow",
+          "Collaborative workflows"
+        ]
+      },
+      php: {
+        title: "PHP",
+        percent: 85,
+        description: "Experience in server-side scripting with PHP, building dynamic websites and web applications. Familiar with modern PHP practices and frameworks.",
+        projects: "CMS implementations, Web applications, REST APIs",
+        experience: "2 years of experience",
+        strengths: [
+          "Object-oriented PHP",
+          "MVC architecture",
+          "API development",
+          "WordPress/PHP integration"
+        ]
+      },
+      bootstrap: {
+        title: "Bootstrap",
+        percent: 95,
+        description: "Proficient in building responsive, mobile-first websites with Bootstrap framework. Skilled in customizing Bootstrap themes and components.",
+        projects: "Responsive websites, Admin dashboards, Prototyping",
+        experience: "3 years of experience",
+        strengths: [
+          "Responsive grid system",
+          "Component customization",
+          "Utility classes",
+          "Theming"
+        ]
+      },
+      tailwind: {
+        title: "Tailwind CSS",
+        percent: 95,
+        description: "Experience with utility-first CSS framework for rapid UI development. Skilled in creating custom designs without leaving the markup.",
+        projects: "Custom component libraries, Rapid prototyping, Design systems",
+        experience: "1.5 years of experience",
+        strengths: [
+          "Utility-first workflow",
+          "Custom configurations",
+          "Responsive design",
+          "Component extraction"
+        ]
+      },
+      github: {
+        title: "GitHub",
+        percent: 90,
+        description: "Extensive experience with GitHub for version control, collaboration, and CI/CD workflows. Familiar with GitHub Actions and project management features.",
+        projects: "Open source contributions, Team projects, CI/CD pipelines",
+        experience: "3 years of professional experience",
+        strengths: [
+          "Pull requests",
+          "Code reviews",
+          "GitHub Actions",
+          "Project management"
+        ]
+      }
+    };
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-0', 'invisible');
+      mobileMenu.classList.add('opacity-100', 'visible');
+      document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('opacity-0', 'invisible');
+      mobileMenu.classList.remove('opacity-100', 'visible');
+      document.body.style.overflow = '';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const html = document.documentElement;
+
+    function toggleTheme() {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+
+    // Skill selection
+    document.querySelectorAll('.skill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const skill = btn.dataset.skill;
+        const skillData = skills[skill];
+        
+        // Update active button
+        document.querySelectorAll('.skill-btn').forEach(b => {
+          b.classList.remove('border-primary', 'border-secondary', 'border-accent');
+          b.querySelector('div').classList.remove('bg-primary/10', 'dark:bg-primary/20');
+        });
+        
+        btn.classList.add('border-primary');
+        btn.querySelector('div').classList.add('bg-primary/10', 'dark:bg-primary/20');
+        
+        // Update skill info
+        document.getElementById('skill-title').textContent = skillData.title;
+        document.getElementById('skill-title-full').textContent = skillData.title;
+        document.getElementById('skill-description').textContent = skillData.description;
+        document.getElementById('skill-projects').textContent = skillData.projects;
+        document.getElementById('skill-experience').textContent = skillData.experience;
+        
+        // Update strengths
+        const strengthsList = document.getElementById('skill-strengths');
+        strengthsList.innerHTML = '';
+        skillData.strengths.forEach(strength => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start';
+          li.innerHTML = `
+            <i class="fas fa-check-circle text-primary mt-1 mr-2 text-sm"></i>
+            <span>${strength}</span>
+          `;
+          strengthsList.appendChild(li);
+        });
+        
+        // Animate progress circle
+        const circle = document.getElementById('progress-circle');
+        const percentElement = document.getElementById('progress-percent');
+        const circumference = 2 * Math.PI * 45;
+        const offset = circumference - (skillData.percent / 100) * circumference;
+        
+        circle.style.strokeDashoffset = offset;
+        circle.style.animation = 'progress 1.5s ease-out forwards';
+        
+        // Animate percentage count
+        let current = 0;
+        const target = skillData.percent;
+        const increment = target / 50;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          percentElement.textContent = Math.round(current) + '%';
+        }, 20);
+      });
+    });
+
+    // Initialize with HTML5 skill
+    document.querySelector('[data-skill="html5"]').click();
+  </script>
+</body>
+</html>
